@@ -1,0 +1,82 @@
+import {
+  ArrowLeftRight,
+  ArrowRight,
+  Binary,
+  Braces,
+  CaseSensitive,
+  Check,
+  CheckCircle2,
+  Clock,
+  Code2,
+  Copy,
+  Database,
+  FileSpreadsheet,
+  FileText,
+  Fingerprint,
+  GitBranch,
+  GitCompare,
+  Globe,
+  Hash,
+  Image as ImageIcon,
+  KeyRound,
+  Link2,
+  Menu,
+  Minimize2,
+  Moon,
+  Palette,
+  Pipette,
+  Regex,
+  Search,
+  ShieldCheck,
+  Sun,
+  Type,
+  X,
+  type LucideIcon,
+} from "lucide-react";
+
+export const iconMap: Record<string, LucideIcon> = {
+  ArrowLeftRight,
+  ArrowRight,
+  Binary,
+  Braces,
+  CaseSensitive,
+  Check,
+  CheckCircle2,
+  Clock,
+  Code2,
+  Copy,
+  Database,
+  FileSpreadsheet,
+  FileText,
+  Fingerprint,
+  GitBranch,
+  GitCompare,
+  Globe,
+  Hash,
+  Image: ImageIcon,
+  KeyRound,
+  Link2,
+  Menu,
+  Minimize2,
+  Moon,
+  Palette,
+  Pipette,
+  Regex,
+  Search,
+  ShieldCheck,
+  Sun,
+  Type,
+  X,
+};
+
+export function Icon({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) {
+  const LucideComponent = iconMap[name];
+  if (!LucideComponent) return null;
+  return <LucideComponent className={className} strokeWidth={1.75} />;
+}
